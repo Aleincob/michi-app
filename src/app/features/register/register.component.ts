@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Michi } from '../models/Michi';
 
 @Component({
   selector: 'app-register',
@@ -15,8 +16,8 @@ export class RegisterComponent {
   constructor(private formBuilder: FormBuilder) { }
 
   saveInput() {
-    const newAdd = {
-      add: this.dataForm.value.add ?? '',
+    const newAdd: Michi = {
+      name: this.dataForm.value.add ?? '',
     }
     console.log(newAdd)
     this.dataForm.reset()
