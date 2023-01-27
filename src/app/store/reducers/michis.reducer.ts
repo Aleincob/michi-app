@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { addMichi, loadMichis, setMichis } from '../actions/michis.actions';
-import { Michi } from 'src/app/features/models/Michi';
+import { Michi } from 'src/app/models/Michi';
 
 export const initialState: Michi[] = [];
 

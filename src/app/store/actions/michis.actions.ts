@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Michi } from 'src/app/features/models/Michi';
+import { Michi } from 'src/app/models/Michi';
 
 export const addMichi = createAction(
   '[Michis] addMichi',

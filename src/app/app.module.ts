@@ -11,21 +11,19 @@ import { michisReducer } from './store/reducers/michis.reducer';
 import { store } from './store/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
+import { MichiEffects } from './store/effects/michis.effects';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RegisterComponent,
-  ],
+  declarations: [AppComponent, RegisterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     StoreModule.forRoot(store),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([MichiEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
